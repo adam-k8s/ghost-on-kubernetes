@@ -22,20 +22,6 @@ stringData:
         "port": 2368,
         "host": "0.0.0.0"
       },
-      "mail": {
-        "transport": "SMTP",
-        "from": "user@server.com",
-        "options": {
-          "service": "Google",
-          "host": "smtp.gmail.com",
-          "port": 465,
-          "secure": true,
-          "auth": {
-            "user": "user@server.com",
-            "pass": "passsword"
-          }
-        }
-      },
       "logging": {
         "transports": [
           "stdout"
@@ -47,8 +33,8 @@ stringData:
         {
           "host": "ghost-on-kubernetes-mysql-service",
           "user": "mysql-db-user",
-          "password": "mysql-db-password",
-          "database": "mysql-db-name",
+          "password": "fky7xgc_ZQM7whd7zne",
+          "database": "mysql-db-phuongdt",
           "port": "3306"
         }
       },

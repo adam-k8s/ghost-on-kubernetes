@@ -11,7 +11,6 @@ metadata:
     app.kubernetes.io/component: ghost
     app.kubernetes.io/part-of: ghost-on-kubernetes
     
-    
 spec:
   # If you want HA for your Ghost instance, you can increase the number of replicas AFTER creation and you need to adjust the storage class. See 02-pvc.yaml for more information.
   replicas: 1
@@ -170,13 +169,13 @@ spec:
       terminationGracePeriodSeconds: 15
       dnsPolicy: ClusterFirst
       # Optional: Uncomment the following to specify node selectors
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: node-role.kubernetes.io/worker
-                    operator: In
-                    values:
-                      - 'true'
+      # affinity:
+      #   nodeAffinity:
+      #     requiredDuringSchedulingIgnoredDuringExecution:
+      #       nodeSelectorTerms:
+      #         - matchExpressions:
+      #             - key: node-role.kubernetes.io/worker
+      #               operator: In
+      #               values:
+      #                 - 'true'
       securityContext: {}

@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: k8s-ghost-content
+  namespace: ghost-on-kubernetes
+  labels:
+    app: ghost-on-kubernetes
+    app.kubernetes.io/name: k8s-ghost-content
+    app.kubernetes.io/instance: ghost-on-kubernetes
+    app.kubernetes.io/version: '5.92'
+    app.kubernetes.io/component: storage
+    app.kubernetes.io/part-of: ghost-on-kubernetes
+    
+spec:
+  accessModes:
+  - ReadWriteOnce # Change this to your accessModes if needed, we suggest ReadWriteMany so we can scale the deployment later.
+  resources:
+    requests:
+      storage: 50Gi
